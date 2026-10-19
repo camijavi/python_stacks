@@ -12,6 +12,9 @@ def main():
     prod = Producto("P-03", "vitamina", 21.85, 7000)
     pila.push(prod)
 
+    # Imprimir en la terminal la pila con formato visual Python Tutor
+    pila.print()
+
     productos = pila.clear()
     for p in productos:
         p.print()

@@ -57,3 +57,15 @@ class Stack:
             p = self.top
             prod = Producto(p.id, p.nombre, p.precio, p.stock)
         return prod
+
+    def print(self, interactive: bool = True):
+        """
+        Visualiza la pila en la terminal al estilo Python Tutor (Frames & Objects).
+        Si interactive=True, inicia el simulador interactivo paso a paso con botones.
+        """
+        from simulator import print_stack_diagram
+        print_stack_diagram(self, interactive=interactive)
+
+    def simulate(self):
+        """Inicia el simulador interactivo con botones paso a paso."""
+        self.print(interactive=True)
